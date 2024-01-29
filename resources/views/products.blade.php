@@ -4,6 +4,10 @@
 <div class="flex flex-wrap justify-evenly">
 
 @foreach ($products as $product)
+<form action="{{ route('products.update', $product->id) }}" method="post">
+            
+    @csrf
+    @method('put')
 <div class="w-80 bg-white shadow rounded m-6">
 
     <div class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
@@ -14,8 +18,10 @@
     </div>
     <div class="p-4 flex flex-col items-center">
         <p class="text-gray-400 font-light text-xs text-center"> Hammond robotics </p>
-        <h1 class="text-gray-800 text-center mt-1">Item name</h1>
-        <p class="text-center text-gray-800 mt-1">€1299</p>
+        <input class="text-gray-800 text-center mt-1" type="text" name="name" placeholder="name" value="{{ $product['name'] }}">
+
+        <input class="text-center text-gray-800 mt-1" type="text" name="name" placeholder="name" value="{{ $product['price'] }}">
+
         <div class="inline-flex items-center mt-2"> <button class="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
                 </svg> </button>
@@ -32,7 +38,11 @@
                     </svg> </button> </div>
         </div>
     </div>
+    <input type="submit" >
+
 </div>
+
+</form>
 
 @endforeach
 </div>

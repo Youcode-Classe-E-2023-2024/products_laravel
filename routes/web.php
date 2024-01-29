@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +22,8 @@ Route::get('/', function () {
 
 
 Route::resource('products', ProductController::class);
+
+Route::put('/product/{post}', [ProductController::class, 'update'])->name('products.update');
 
 Route::get('delete/{id}','ProductController@remove');
 
