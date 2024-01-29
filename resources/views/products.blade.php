@@ -1,3 +1,4 @@
+<script src="https://cdn.tailwindcss.com"></script>
 <div class="w-80 bg-white shadow rounded">
     <div class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
         <div class="flex justify-between"> <input type="checkbox" /> <button class="text-white hover:text-blue-500"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
