@@ -4,14 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\product;
 use Illuminate\Http\Request;
-use App\Models\product;
 
 class ProductController extends Controller
 {
-    public function index()
-    {
-        return view('product.show');
-    }
 
     public function create()
     {
@@ -39,14 +34,14 @@ class ProductController extends Controller
 
       function index() {
         $products = product::All();
-        return view("products", compact("products"));
+        return view("product/products", compact("products"));
       }
-        
+
     public function remove($id){
         $product = product::find($id);
         $product->delete();
         return redirect('/')->with('status',"data deleted successfully");
-      
+
 
     }
 }
