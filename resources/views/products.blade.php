@@ -1,5 +1,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
-<div class="w-80 bg-white shadow rounded">
+
+
+<div class="flex flex-wrap justify-evenly">
+
+@foreach ($products as $product)
+<div class="w-80 bg-white shadow rounded m-6">
+
     <div class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
         <div class="flex justify-between"> <input type="checkbox" /> <button class="text-white hover:text-blue-500"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -26,4 +32,7 @@
                     </svg> </button> </div>
         </div>
     </div>
+</div>
+
+@endforeach
 </div>
