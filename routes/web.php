@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 
 Route::resource('products', ProductController::class);
+
 Route::get('delete/{id}','ProductController@remove');
 
