@@ -23,3 +23,6 @@ Route::get('/product/create', [productController::class , 'create']);
 Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 
 Route::resource('products', ProductController::class);
+
+Route::get('delete/{id}','ProductController@remove');
+
