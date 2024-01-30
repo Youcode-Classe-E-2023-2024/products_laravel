@@ -22,14 +22,12 @@ class ProductController extends Controller
     public function update(product $post) {
         $validated = request()->validate([
             'name' => 'required|min:3|max:200',
-            'description' => 'required|min:3|max:200',
-            'quantite' => 'required|min:3|max:200',
             'price' => 'required|min:3|max:200'            
         ]);
 
         $post->update($validated);
 
-        return redirect()->route('products', $post->id);
+        return redirect()->route('products');
     }
 
 }
