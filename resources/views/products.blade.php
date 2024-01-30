@@ -20,7 +20,7 @@
         <p class="text-gray-400 font-light text-xs text-center"> Hammond robotics </p>
         <input class="text-gray-800 text-center mt-1" type="text" name="name" placeholder="name" value="{{ $product['name'] }}">
 
-        <input class="text-center text-gray-800 mt-1" type="text" name="name" placeholder="name" value="{{ $product['price'] }}">
+        <input class="text-center text-gray-800 mt-1" type="text" name="price" placeholder="price" value="{{ $product['price'] }}">
 
         <div class="inline-flex items-center mt-2"> <button class="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
@@ -38,6 +38,7 @@
                     </svg> </button> </div>
         </div>
     </div>
+    
     <input type="submit" >
 
 </div>
